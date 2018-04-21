@@ -1,0 +1,33 @@
+<DOCTYPE!HTML>
+<html>
+<head>
+	<title>First page</title>
+</head>
+<body>
+<h1>This is a heading </h1>
+<script type="text/javascript">
+var counter = 0
+var total = 0
+var average = 0
+age = new Array(10)
+do
+{
+	age[counter] = prompt("Enter age")
+	counter++;
+}
+while(confirm("Add More ?")==true)
+
+for (i=0; i < counter; i++)
+{
+	document.writeln("Age " + i + " is " + age[i]);
+	document.writeln("<br>");
+	total=+total + +age[i];
+}
+	average = total/counter;
+	document.writeln("<br>");
+	document.writeln("Total ages = " + total);
+	document.writeln("<br>");
+	document.writeln("Average age is " + total + "/"+ counter + "=" +average);
+</script>
+</body>
+</html>

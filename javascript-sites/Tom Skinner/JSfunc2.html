@@ -1,0 +1,32 @@
+<DOCTYPE!HTML>
+<html>
+<head>
+<script type="text/javascript">
+	function checkRange(x,min,max)
+	{
+		if(x >= min && x <= max)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+<h1>Variable check</h1>
+<script type="text/javascript">
+	var x=prompt("Enter number to check",0);
+	if(checkRange(x,1,10))
+	{
+		alert("Within range");
+	}
+	else
+	{
+		alert("Outside range");
+	}
+</script>
+</body>
+</html>

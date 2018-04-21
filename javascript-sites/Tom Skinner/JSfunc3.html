@@ -1,0 +1,27 @@
+<DOCTYPE!HTML>
+<html>
+<head>
+</head>
+<body>
+<h1>Celsius to Fahrenheit and Fahrenheit to Celcius</h1>
+<button onClick="ftoc()">Fahrenheit to Celcius</button>
+<button onClick="ctof()">Celsius to Fahrenheit</button>
+
+<p id="display"></p>
+<script>
+	function ftoc() {
+		var fahrenheit = prompt("Current Fahrenheit temperature?");
+		var celsius = (fahrenheit-32)*5/9;
+		console.log(celsius);
+		document.getElementById("display").innerHTML = celsius + " Celsius";
+	}
+	
+	function ctof() {
+		var celsius = prompt("Current Celsius temperature?");
+		var fahrenheit = (celcius*9/7)+32;
+		console.log(fahrenheit);
+		document.getElementById("display").innerHTML = fahrenheit + " Fahrenheit";
+	}
+</script>
+</body>
+</html>
