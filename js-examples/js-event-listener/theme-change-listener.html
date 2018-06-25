@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Theme Change Listener</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Theme Change Listener</h2>
+
+    <div id="theme">
+        <div id="red">Red</div>
+        <div id="yellow">Yellow</div>
+        <div id="pink">Pink</div>
+        <div id="green">Green</div>
+        <div id="orange">Orange</div>
+        <div id="purple">Purple</div>
+        <div id="blue">Blue</div>
+    </div>
+
+
+    <div id="square"></div>
+
+
+    <script>
+        
+        let theme = document.getElementById('theme');
+        let square = document.getElementById('square');
+
+        //console.log(theme);
+
+        theme.addEventListener('click', themePicker, false);
+
+        function themePicker(e){
+            if(e.target !== e.currentTarget){
+                let themeSelected = e.target.id;
+                alert('Theme selected is ' + themeSelected);
+                
+
+                // of the next 3 will work to remove any existing class values
+                //square.className = '';
+                square.removeAttribute('class');
+                //square.classList.remove('red','blue');
+               
+                square.classList.add(themeSelected);
+                square.innerHTML = themeSelected;
+            }
+            e.stopPropagation();
+        }
+    
+    </script>
+
+
+
+</body>
+</html>

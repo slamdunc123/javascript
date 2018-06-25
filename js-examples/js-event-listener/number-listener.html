@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List Listener</title>
+</head>
+<body>
+
+    <!-- <select name="list" id="list">
+        <option value="list-item1">one</option>
+        <option value="list-item2">two</option>
+        <option value="list-item3">three</option>
+        <option value="list-item4">four</option>
+    </select> -->
+
+    <!-- <p id="list-picked"></p> -->
+
+    <!-- <div id="click-button">Click</div> -->
+
+
+
+
+    <div id="numbers"> 
+        <div id="one">One</div>
+        <div id="two">Two</div>
+        <div id="three">Three</div>
+    </div>  
+
+
+    <script>
+    // var res = document.getElementById('list');
+    // var show = document.getElementById('list-picked');
+
+    // console.log(res);
+    // console.log(show);
+
+    // var clickButton = document.getElementById('click-button');
+
+    // clickButton.addEventListener('click', clickBtn, false);
+    // //clickButton.addEventListener('click', changeColor, false);
+
+    // function clickBtn(){
+    //     alert('Button clicked');
+
+        
+    // }
+
+    // document.addEventListener('load', changeColor, false);
+
+    // function changeColor(){
+    //     document.body.style.backgroundColor = 'red';
+    // }
+    
+
+    // var one = document.getElementById('one');
+    // var two = document.getElementById('two');
+    // var three = document.getElementById('three');
+
+
+    // one.addEventListener('click', number, false);
+    // two.addEventListener('click', number, false);
+    // three.addEventListener('click', number, false);
+
+    // function number(event){
+    //     var numberClicked = event.target.id;
+    //     alert('Number clicked is ' + numberClicked);
+    // }
+
+    var nums = document.getElementById('numbers');
+    console.log(nums);
+
+    nums.addEventListener('click', numSelected, false);
+
+    function numSelected(event){
+        if(event.target !== event.currentTarget){
+            var clickedItem = event.target.id;
+            console.log(clickedItem.style);
+            alert('Number selected is ' + clickedItem);
+        }
+        event.stopPropagation();
+    }
+
+    
+    </script>
+
+    
+</body>
+</html>

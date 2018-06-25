@@ -1,0 +1,31 @@
+#div1 {
+    color: white;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+#div2 {
+    color: white;
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}
+
+#div3 {
+    color: white;
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+}
+
+#div4 {
+    color: white;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+.div {
+    font-size: 24px;
+}

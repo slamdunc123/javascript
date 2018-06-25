@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random 1</title>
+</head>
+<body>
+
+    <div id="test">This is the test div</div>
+
+    <script>
+
+        let test = document.getElementById('test');
+        test.addEventListener('click', testClicked, false);
+
+
+        function testClicked(){
+            test.innerHTML = "div has changed";
+        }
+        
+
+    </script>
+    
+</body>
+</html>

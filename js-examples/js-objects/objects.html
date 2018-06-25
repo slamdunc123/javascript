@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objects</title>
+</head>
+<body>
+
+
+    <script>
+
+    //Ways of creating objects
+
+    //The literal notation when specifying properties directly with a value.
+    let phone = {
+    make: 'samsung',
+    model: 'A5',
+    getName: function(){
+        return this.make + ' ' + this.model;
+    }
+    };
+    console.log(phone);
+    console.log(phone.make);
+    console.log(phone.model);
+    console.log(phone.getName());
+
+    //The dot notation when specifying a property whos values are provided as part of an argument or expression.
+    let car = {};// same as - let phone = new Object();
+    car.make = 'Ford';
+    car.model = 'Mustang';
+    console.log(car);
+    console.log(car.make);
+    console.log(car.model);
+
+    //The square bracket notation when the property name itself is something that is part of an argument or expression.
+    let laptop = {};
+    laptop['make'] = 'Lenovo';
+    laptop['model'] = 'Y50';
+    console.log(laptop);
+    console.log(laptop.make);
+    console.log(laptop.model);
+
+    //Using Object.create can help avoid duplication and apply inheritance
+    let person = {
+        getName: function(){
+            return this.firstName + ' ' + this.lastName;
+        }
+    };
+
+    let funnyGuy = Object.create(person);
+    funnyGuy.firstName = 'Conan';
+    funnyGuy.lastName = 'OBrien';
+    console.log(funnyGuy);
+    console.log(funnyGuy.getName());//inerits properties in this case the getName() function from parent prototype - person
+
+    let theDude = Object.create(person);
+    theDude.firstName = 'Jeffrey';//assigns local properties
+    theDude.lastName = 'Lebowski';
+    console.log(theDude);
+    console.log(theDude.getName());//calls the prototype property getName()
+
+    let detective = Object.create(person);
+    detective.firstName = 'Adrian';
+    detective.lastName = 'Monk';
+    console.log(detective);
+    console.log(detective.getName());
+
+
+
+    </script>
+    
+</body>
+</html>

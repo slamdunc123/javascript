@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bubble Sort</title>
+</head>
+<body>
+
+    <h2>Bubble Sort</h2>
+
+    <div id="bubble-sort"></div>
+
+    <button id="button" onclick="bubbleSort()">Bubble Sort</button>
+
+    <script>
+    
+//declare variables
+
+    var numArr = [5,4,3,2,1];
+
+    console.log(numArr[0]);
+   
+    function bubbleSort(){
+//outer loop - runs bubblesort outer loop to run inner loop the required number of times   
+       for(var j = 0; j < numArr.length - 1; j++){
+        var numTemp;
+//inner loop - runs bubblesort inner loop to take number in position [0] to [4]       
+            for(var i = 0; i < numArr.length; i ++){
+                    if(numArr[i] > numArr[i+1]){
+                        numTemp = numArr[i];
+                        numArr[i] = numArr[i+1];
+                        numArr[i+1] = numTemp;
+                    }
+                    
+                    console.log(numArr[i]);
+            }
+        
+       }  
+        
+    }
+    
+    
+    </script>
+    
+</body>
+</html>

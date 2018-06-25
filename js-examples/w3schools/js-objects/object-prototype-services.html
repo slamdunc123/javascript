@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+    <h2>Object Prototype Services</h2>
+
+    <p id="service"></p>
+
+    <button type="button" id="show-services" onclick="showServices()">Show Services</button>
+
+    <script>
+
+//call function from button click
+
+    function showServices(){
+    
+//create constructor
+
+    function Service(id, name, description, category){
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.category = category;
+    }
+
+//create object
+
+    var serv1 = new Service('S001', 'Finance', 'Corporate Financials', 'Finance and Accounts');
+    var serv2 = new Service('S002', 'IT', 'Corporate Information Services', 'Information Technology');
+    var serv3 = new Service('S003', 'PMO', 'Programme Management Office', 'Programme Management');
+    var serv4 = new Service('S004', 'Facilities Managment', 'Property Services', 'Properties');
+
+//create array of objects
+
+    var services = [serv1, serv2, serv3, serv4];
+
+//create variable and assign html element
+
+    var service = document.getElementById('service');
+
+//create loop to display object properties
+
+    for(var i = 0; i < services.length; i++){
+        service.innerHTML += services[i].id + '<br>' +
+        services[i].name + '<br>' +
+        services[i].description + '<br' +
+        services[i].category + '<br><br><br>';
+    }
+
+    }
+    
+    </script>
+
+
+</body>
+</html>

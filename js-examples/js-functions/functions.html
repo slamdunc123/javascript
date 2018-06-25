@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+</head>
+<body>
+
+    <form action="functions.html" method="get">
+        <input type="text" name="a" value="" id="a" >
+        <input type="text" name"b" value="" id="b">
+        <!-- <input type="submit" name="submit" id="submit"> -->
+        <input type="button" value="submit" onclick="output()">
+    </form>
+    <div id="result"></div>
+
+    
+
+    <script>
+
+        function output(){
+
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let res = document.getElementById('result');
+            res.innerHTML = a + b + "game over";
+           console.log(res.innerHTML);
+            
+        }
+
+        // // let submit = document.getElementById('submit');
+        // let a = document.getElementById('a').value;
+        // let b = document.getElementById('b').value;
+        // let result = document.getElementById('result');
+        // result.innerHTML = (a+b);
+
+        
+
+        // submit.addEventListener('click', sumTest, false);
+
+        
+    // function sumTest(){
+    //     let a = document.getElementById('a').value;
+    //     let result = document.getElementById('result');
+    //     return result.innerHTML = a;
+    //     // console.log(a);
+    //     // let a = 10;
+    //     // let b = 5;
+    //     // return a;
+    //     // alert('hello');
+    //     //document.writeln(a);
+    //     // e.stopPropagation();
+
+    // }
+    // console.log(sumTest());
+    
+    </script>
+    
+</body>
+</html>

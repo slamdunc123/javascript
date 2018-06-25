@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS AJAX</title>
+</head>
+<body>
+    <h2>Ajax XMLHttp</h2>
+
+    <p id="ajax">Let Ajax change this text</p>
+    <p id="employees">Employees</p>
+
+    <!-- <button type="button" onclick="ajaxContent()">AJAX Content</button> -->
+    <button type="button" onclick="employees()">Employees</button>
+
+    <script>
+        // function ajaxContent(){
+        //     var xhttp = new XMLHttpRequest();
+        //     xhttp.onreadystatechange = function(){
+        //         if (this.readyState == 4 && this.status == 200){
+        //             document.getElementById('ajax').innerHTML = this.responseText;
+        //         }
+        //     };
+
+        //     xhttp.open('GET', 'ajax_info.txt', true);
+        //     xhttp.send();
+        // }
+            var emps = document.getElementById('employees');
+
+        function employees(){
+            var xhttp = new XMLHttpRequest();
+            // xhttp.onreadystatechange = function(){
+            //     if(this.readyState == 4 && this.status == 200){
+            //         document.getElementById('ajax').innerHTML = this.responseText;
+            //     }            
+            // };
+
+            xhttp.open('GET', 'employees.json', true);
+            xhttp.onload = function(){
+                var data = JSON.parse(xhttp.responseText);
+                console.log(data.employees[0]);
+                renderHTML(data.employees[0]);
+            }
+            xhttp.send();
+        }
+
+        function renderHTML(d){
+            emps.innerHTML = d.firstName;
+
+        } 
+        
+    </script>
+</body>
+</html>

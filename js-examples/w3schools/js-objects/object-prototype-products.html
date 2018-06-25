@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+
+<h2>Object Prototype Products</h2>
+    
+<p id="product"></p>
+
+
+<script>
+//create constructor
+    function Product(id, name, description, stockLevel){
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.stockLevel = stockLevel;
+    }
+//create objects 
+    var prod1 = new Product('A001', 'Hoover', 'Vacuum Cleaner', 10);
+    var prod2 = new Product('A002', 'Kenwood', 'Food Processor', 5);
+    var prod3 = new Product('A003', 'Samsung', 'Smart TV', 15);
+    var prod4 = new Product('A004', 'Hotpoint', 'Washing Machine', 20);
+    var prod5 = new Product('A005', 'Sony', 'Music System', 0);
+
+//assign html element to a variable
+    var product = document.getElementById('product');
+
+//create an array of all products
+    var products = [prod1, prod2, prod3, prod4, prod5];
+
+//loop through the array of all products    
+    for(var i = 0; i < products.length; i++){
+        //console.log('hello'+ i);
+
+//output of loop - use += to avoid overwriting
+        product.innerHTML += 
+        'ID: ' + products[i].id +
+        '<br>Name: ' + products[i].name +
+        '<br>Description: ' + products[i].description +
+        '<br>Stock Level: ' + products[i].stockLevel + '<br><br>';
+    }
+
+
+</script>
+</body>
+</html>

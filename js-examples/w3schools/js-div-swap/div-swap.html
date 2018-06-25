@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Div Swap</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Div Swap</h2>
+
+    <table>
+        <tr>
+            <td>
+                <div id="div1">One</div>
+            </td>
+            <td>
+                <div id="div2" class="div">Two</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="div3" class="div">Three</div>
+            </td>
+            <td>
+                <div id="div4">Four</div>
+            </td>
+        </tr>
+    </table>
+    
+    
+
+    <button type="button" id="btn" onclick="divSwap()">Swap</button>
+
+
+    <script>        
+
+        function divSwap(){
+
+            var div1 = document.getElementById('div1');
+            var div2 = document.getElementById('div2');
+            var div3 = document.getElementById('div3');
+            var div4 = document.getElementById('div4');
+
+            div1.classList.toggle('div');
+            div2.classList.toggle('div');
+            div3.classList.toggle('div');
+            div4.classList.toggle('div');
+
+        //     var divTemp;
+
+        //     divTemp = div1.innerHTML;
+        //     div1.innerHTML = div2.innerHTML;
+        //     div2.innerHTML = divTemp;
+        }
+        
+    
+    </script>
+    
+</body>
+</html>

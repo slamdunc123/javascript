@@ -1,0 +1,100 @@
+/* #heading {
+    display: none;
+} */
+
+.row {
+    margin: 10px;
+}
+.panel {
+    text-align: center;
+    color: white;
+    background-color: black;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.panel#red {
+    text-align: center;
+    color: white;
+    background-color: red;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.panel#yellow {
+    text-align: center;
+    color: white;
+    background-color: yellow;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.panel#pink {
+    text-align: center;
+    color: white;
+    background-color: pink;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.panel#green {
+    text-align: center;
+    color: white;
+    background-color: green;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.panel#orange {
+    text-align: center;
+    color: white;
+    background-color: orange;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.panel#purple {
+    text-align: center;
+    color: white;
+    background-color: purple;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.panel#blue {
+    text-align: center;
+    color: white;
+    background-color: blue;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.heading2 {
+    color:white;
+}
+
+#h2-1 {
+    background-color: red;
+}
+
+#h2-2 {
+    background-color: green;
+}
+
+#h2-3 {
+    background-color: blue;
+}
+
+
+
+
+
+

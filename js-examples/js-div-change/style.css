@@ -1,0 +1,14 @@
+#squareCSS {
+    width: 100px;
+    height: 100px;
+    border: solid 5px black;
+    background-color: blue;    
+    display: inline-block;
+}
+
+#rectangleCSS {
+    width: 200px;
+    height: 100px;
+    border: solid 5px black;
+    background-color: red;
+}

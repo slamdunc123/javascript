@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS AJAX</title>
+</head>
+<body>
+    <h2>Ajax XMLHttp</h2>
+
+<!-- id used to display json results -->
+    <p id="employees"></p>
+
+<!-- button to call employees function -->
+    <button type="button" onclick="employees()">Employees</button>
+
+    <script>
+//asign DOM id 'employees' to variable emps
+        var emps = document.getElementById('employees');
+
+//function to render json data to html
+        function employees(){
+            var xhttp = new XMLHttpRequest();
+
+//function to confirm json file connection and to create loop of results
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    
+                    xhttp.onload = function(){
+//JSON.parse() function converts text in json file to JavaScript object
+                        var result = JSON.parse(xhttp.responseText);
+//loop through the JvaScript object and call a function each time render results to html          
+                        for(var i = 0; i < result.employees.length; i++){
+                            console.log(result.employees, i);
+                            renderHTML(result.employees, i);
+                        }
+                    }
+                
+                }            
+            };
+
+            xhttp.open('GET', 'employees.json', true);
+            
+            xhttp.send();
+        }
+//function to render json results to html
+
+        function renderHTML(res, i){
+            emps.innerHTML += res[i].firstName +
+            ' ' + res[i].lastName + '<br>';
+        } 
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+    <h2>Object Prototypes</h2>
+
+    <p id="employee"></p>
+    <p id="address"></p>
+
+    <script>
+//function constructor Employee - creates blueprint for objects
+        function Employee(id, firstName, lastName, age, role, nationality){
+            this.id = id;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.role = role;
+            this.nationality = nationality;
+        }
+
+//function constructor Address - creates blueprint for objects       
+        function Address(house, street, city, postcode){
+            this.house = house;
+            this.street = street;
+            this.city = city;
+            this.postcode = postcode;
+        }
+
+//object declaration - uses function constructor Employee
+        var emp1 = new Employee(1001, 'John', 'Doe', 50, 'Manager', 'British');
+        var emp2 = new Employee(1002, 'Jane', 'Doe', 49, 'Cleaner', 'American');
+
+//object declaration - uses function constructor Address
+        var add1 = new Address(18, 'Springfield Avenue', 'Chestefield', 'S40 1DJ');
+        var add2 = new Address(7, 'Mawfa Walk', 'Sheffield', 'S14 1DJ');
+
+//assign all objects based on function construtor Employee to array employees
+        var employees = [emp1, emp2];
+
+//assign all objects based on function construtor Address to array addresses
+        var addresses = [add1, add2];
+
+//assign HTML element employee to variable employee
+        var employee = document.getElementById('employee');
+
+//assign HTML address employee to variable address
+        var address = document.getElementById('address');
+       
+//create loop to display object properties
+        for(var i = 0; i < employees.length; i++){
+        //    console.log('hello' + i);
+
+            employee.innerHTML += 
+            'Employee: ' + employees[i].id + 
+            '<br> First Name: ' + employees[i].firstName + 
+            '<br> Last Name: ' + employees[i].lastName +
+            '<br> Role: ' + employees[i].role +
+            '<br> Nationality: ' + employees[i].nationality + '<br><br>';
+
+            address.innerHTML += 
+            'House: ' + addresses[i].house +
+            '<br> Street: ' + addresses[i].street +
+            '<br> City: ' + addresses[i].city +
+            '<br> Postcode: ' + addresses[i].postcode + '<br><br>';
+
+
+        }
+
+
+
+
+        
+    </script>
+</body>
+</html>
